@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_req"
+    android:background="?android:selectableItemBackground">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="15dp"
+        android:id="@+id/user_single_image1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/default_avatar" />
+
+    <TextView
+        android:id="@+id/user_single_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_single_image1"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/user_single_image1"
+        android:text="Display Name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/user_single_status1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/user_single_name1"
+        android:layout_below="@+id/user_single_name1"
+        android:layout_marginTop="10dp"
+        android:text="User default Status"
+        android:layout_marginBottom="5dp"/>
+
+
+
+        <Button
+            android:layout_alignLeft="@id/user_single_status1"
+            android:id="@+id/request_accept_btn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="@string/accpt_request"
+            android:textAllCaps="false"
+            android:background="@color/green"
+            android:layout_below="@id/user_single_status1"
+            android:layout_toRightOf="@id/user_single_image1"
+            android:layout_marginBottom="3dp"
+            />
+
+        <Button
+            android:id="@+id/request_refuse_btn"
+            android:layout_marginBottom="3dp"
+            android:layout_width="100dp"
+            android:textAllCaps="false"
+            android:layout_marginLeft="5dp"
+            android:layout_height="30dp"
+            android:text="@string/refuse_request"
+            android:elevation="4dp"
+            android:background="@color/red"
+            android:layout_below="@id/user_single_status1"
+            android:layout_toRightOf="@id/request_accept_btn"/>
+
+
+</RelativeLayout>
